@@ -13,6 +13,8 @@ public class MinuteCounterTest {
         assertEquals(690, counter.count("12:30pm-12:00am"));
         assertEquals(1425, counter.count("1:23am-1:08am"));
         assertEquals(0, counter.count("11:00pm-11:00pm"));
+        assertEquals(1, counter.count("12:00am-12:01am"));
+        assertEquals(1, counter.count("11:59pm-12:00am"));
         assertEquals(390, counter.count("10:15am-04:45pm"));
     }
 }
